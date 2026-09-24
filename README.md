@@ -12,7 +12,7 @@ habilitar o GitHub Pages em Settings → Pages → Branch: `main` / `/ (root)`)
 - `index.html`, `modelos.html`, `mostra-2026.html`, `faq.html` — páginas do site (HTML puro, sem build).
 - `assets/css/style.css` — estilo único, compartilhado por todas as páginas.
 - `assets/img/` — logo do IFRN usado no cabeçalho.
-- `files/<modalidade>/` — os arquivos para download (`.docx`, `.pdf`, `.tex`), um subdiretório por modalidade (`pesquisa/`, `estagio/`, `extensao/`, `tal/`, `mostra-2026/`).
+- `files/<modalidade>/` — os arquivos para download (`.docx`, `.pdf`, `.tex`), um subdiretório por modalidade (`pesquisa/`, `estagio/`, `extensao/`, `mostra-2026/`).
 
 ## Como atualizar
 
