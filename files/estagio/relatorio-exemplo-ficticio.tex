@@ -1,0 +1,185 @@
+% ============================================================================
+% EXEMPLO FICTÍCIO — Relatório de Estágio como Prática Profissional
+% Curso Técnico Integrado em Informática (PPC 2012) — IFRN Campus Ceará-Mirim
+% ============================================================================
+%
+% Este arquivo é o irmão de "relatorio-metalinguistico.tex": mesmo modelo,
+% mesma estrutura de seções, mas com um estágio fictício preenchido do
+% início ao fim, para servir de referência visual de como o relatório
+% pronto deve ficar.
+%
+% ATENÇÃO: dados, números, nomes de pessoas e de empresa deste exemplo são
+% inventados para fins didáticos. Não citar nem reutilizar como se fossem
+% reais.
+%
+% Compila com pdflatex (rode duas vezes por causa do sumário/referências).
+% ============================================================================
+
+\documentclass[article,12pt,a4paper]{abntex2}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{times}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{microtype}
+
+\renewcommand{\maketitlehookb}{}%% sem título em língua estrangeira (sem abstract)
+\titulo{Relatório de Estágio Curricular no Setor de Suporte Técnico da Conecta Informática Ltda.}
+\autor{Bruno Henrique Alves Farias \and Prof.\ Ricardo Nogueira de Souza\footnote{Professor orientador. Docente da área de Informática, IFRN Campus Ceará-Mirim.}}
+\local{Ceará-Mirim -- RN}
+\data{2026}
+\instituicao{Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte -- IFRN \\ Campus Ceará-Mirim}
+
+\begin{document}
+\maketitle
+
+\begin{resumo}
+O estágio curricular é um dos meios pelos quais o estudante do curso
+Técnico Integrado em Informática aplica, em ambiente real de trabalho, os
+conhecimentos desenvolvidos ao longo da formação técnica. Este relatório
+tem como objetivo descrever e refletir sobre as atividades desenvolvidas
+durante o estágio curricular supervisionado realizado no setor de suporte
+técnico da empresa Conecta Informática Ltda., em Ceará-Mirim/RN, com carga
+horária total de 300 horas, em jornada de 6 horas diárias. As atividades
+desenvolvidas incluíram atendimento a chamados de suporte, instalação e
+configuração de estações de trabalho, manutenção preventiva de
+computadores e apoio à administração da rede local da empresa. Ao longo do
+estágio, foram atendidos 87 chamados de suporte técnico e realizada a
+configuração de 12 estações de trabalho novas. Conclui-se que o estágio
+permitiu a aplicação prática de conteúdos estudados nas disciplinas de
+Organização e Manutenção de Computadores e de Arquitetura de Redes de
+Computadores, e contribuiu para o desenvolvimento de competências de
+atendimento ao usuário não trabalhadas em sala de aula.
+
+\vspace{\onelineskip}
+\noindent
+\textbf{Palavras-chave}: Estágio curricular. Suporte técnico. Manutenção de computadores. Redes de computadores.
+\end{resumo}
+
+\textual
+
+\section{Introdução}
+
+A busca por um estágio na área de suporte técnico surgiu do interesse em
+aplicar, em ambiente real de trabalho, os conteúdos de manutenção de
+computadores e redes estudados ao longo do curso Técnico Integrado em
+Informática. A oportunidade de estágio na Conecta Informática Ltda.,
+empresa de prestação de serviços de TI em Ceará-Mirim/RN, permitiu essa
+aplicação prática, alinhada à área técnica do curso.
+
+Este relatório tem como objetivo registrar e refletir sobre as atividades
+desenvolvidas no setor de suporte técnico da empresa, ao longo do período
+de estágio, em conformidade com o Plano de Estágio assinado pelo
+estudante, pelo professor orientador e pelo supervisor técnico da
+concedente.
+
+O relatório está organizado da seguinte forma: a seção 2 apresenta os
+dados formais do estágio; a seção 3 caracteriza a empresa concedente; a
+seção 4 detalha as atividades desenvolvidas por tipo de tarefa; e a seção
+5 traz as considerações finais.
+
+\section{Estágio Curricular}
+
+O estágio é regido pela Lei nº 11.788, de 25 de setembro de 2008 (Lei do
+Estágio), e pela normativa interna do IFRN (Organização Didática, Arts.
+307 a 319). Trata-se de estágio curricular não obrigatório, realizado a
+partir do segundo ano do curso, conforme facultado pela Organização
+Didática vigente.
+
+O objetivo do estágio foi possibilitar ao estudante o exercício da prática
+profissional, aliando teoria e prática, e facilitar seu ingresso no mundo
+do trabalho, em conformidade com os objetivos previstos para o estágio
+técnico na normativa do IFRN.
+
+A carga horária total contratada foi de 300 horas, cumpridas em jornada de
+6 horas diárias e 30 horas semanais, compatível com o horário das aulas do
+estudante, conforme o Termo de Compromisso firmado entre o IFRN, a
+concedente e o estudante. O estágio foi realizado no período de 3 de
+março a 30 de junho de 2026.
+
+\section{Caracterização da Concedente}
+
+A Conecta Informática Ltda. é uma empresa de prestação de serviços de
+tecnologia da informação, localizada no centro de Ceará-Mirim/RN, atuando
+no atendimento a clientes pessoa física e pequenas empresas da região. O
+fluxo de serviço da empresa consiste na abertura de chamados por telefone
+ou aplicativo de mensagens, triagem pelo setor de suporte e atendimento
+presencial ou remoto, conforme a complexidade do problema.
+
+Os tipos de serviço prestados pela empresa incluem manutenção de
+computadores e notebooks, configuração de redes domésticas e empresariais,
+recuperação de dados e venda de equipamentos de informática.
+
+O setor de suporte técnico, onde o estágio foi realizado, conta com 4
+funcionários, incluindo o supervisor técnico responsável pela orientação
+do estagiário, e dispõe de uma bancada de manutenção com ferramentas
+próprias, um estoque de peças de reposição e uma rede local com 6
+estações de trabalho para diagnóstico e testes.
+
+\section{Atividades Desenvolvidas}
+
+\subsection{Atendimento a chamados de suporte}
+
+Foram atendidos, ao longo do estágio, 87 chamados de suporte técnico,
+envolvendo problemas de lentidão, travamento, infecção por software
+malicioso e falhas de conectividade de rede. Cada chamado era triado pelo
+supervisor, e o estudante realizava o diagnóstico inicial e, sob
+supervisão, a correção do problema. A atividade foi feita seguindo o
+fluxo de atendimento da empresa, e permitiu desenvolver agilidade no
+diagnóstico de problemas comuns de hardware e software, habilidade pouco
+trabalhada nas aulas práticas do curso, que costumam envolver cenários já
+previamente diagnosticados.
+
+\subsection{Instalação e configuração de estações de trabalho}
+
+Foram configuradas 12 estações de trabalho novas para clientes da empresa,
+incluindo instalação de sistema operacional, drivers, pacote de
+aplicativos de escritório e configuração de acesso à rede. Essa atividade
+foi realizada seguindo um checklist padrão da empresa, e aplicou
+diretamente os conteúdos de instalação e configuração de sistemas
+estudados na disciplina de Organização e Manutenção de Computadores.
+
+\subsection{Apoio à administração de rede}
+
+O estagiário apoiou o supervisor técnico na configuração de três redes
+locais em clientes empresariais, incluindo a configuração de roteadores,
+criação de redes separadas para convidados e testes de velocidade de
+conexão. A atividade foi feita sob supervisão direta, com o estagiário
+executando as etapas técnicas sob orientação, e permitiu aplicar
+conceitos de endereçamento IP e configuração de redes estudados na
+disciplina de Arquitetura de Redes de Computadores.
+
+\section{Considerações Finais}
+
+O estágio atendeu às expectativas iniciais, e o tempo de 300 horas foi
+suficiente para o estudante participar de um volume significativo de
+atendimentos e desenvolver autonomia crescente ao longo do período. O
+contato com os técnicos da empresa e com os clientes atendidos contribuiu
+para o desenvolvimento de habilidades de comunicação e atendimento ao
+público, complementares às habilidades técnicas.
+
+Há uma correlação direta entre as atividades desenvolvidas no estágio e os
+conteúdos das disciplinas de Organização e Manutenção de Computadores e de
+Arquitetura de Redes de Computadores, o que confirma a unidade entre
+teoria e prática exigida pela prática profissional. Como sugestão para
+estagiários futuros na mesma área, recomenda-se buscar, desde o início,
+anotar os chamados atendidos com detalhe, o que facilita bastante a
+elaboração deste relatório ao final do estágio.
+
+\postextual
+
+\section*{Referências}
+
+\newcommand{\referencia}[1]{\par\noindent\hangindent=1cm #1\par\medskip}
+
+\referencia{BRASIL. \textit{Lei nº 11.788, de 25 de setembro de 2008}.
+Dispõe sobre o estágio de estudantes. Brasília, DF: Diário Oficial da
+União, 2008.}
+
+\referencia{CONECTA INFORMÁTICA LTDA. \textit{Manual interno de
+atendimento ao cliente}. Ceará-Mirim: Conecta Informática, 2024.}
+
+
+\end{document}

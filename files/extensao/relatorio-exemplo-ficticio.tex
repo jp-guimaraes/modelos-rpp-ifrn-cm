@@ -1,0 +1,224 @@
+% ============================================================================
+% EXEMPLO FICTÍCIO — Relatório Técnico de Extensão como Prática Profissional
+% Curso Técnico Integrado em Informática (PPC 2012) — IFRN Campus Ceará-Mirim
+% ============================================================================
+%
+% Este arquivo é o irmão de "relatorio-metalinguistico.tex": mesmo modelo,
+% mesma estrutura de seções, mas com um projeto fictício preenchido do
+% início ao fim, para servir de referência visual de como o relatório
+% pronto deve ficar.
+%
+% ATENÇÃO: dados, números, nomes de pessoas e de escolas deste exemplo são
+% inventados para fins didáticos. Não citar nem reutilizar como se fossem
+% reais.
+%
+% Compila com pdflatex (rode duas vezes por causa do sumário/referências).
+% ============================================================================
+
+\documentclass[article,12pt,a4paper]{abntex2}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{times}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{microtype}
+
+\renewcommand{\maketitlehookb}{}%% sem título em língua estrangeira (sem abstract)
+\titulo{Manutenção Preventiva e Corretiva em Laboratório de Informática de Escola Pública Municipal: um Relato de Extensão}
+\autor{Rafael dos Santos Medeiros \and Ana Beatriz Lima Costa \and Prof.\ Camila Ferreira Duarte\footnote{Professora orientadora. Docente da área de Informática, IFRN Campus Ceará-Mirim.}}
+\local{Ceará-Mirim -- RN}
+\data{2026}
+\instituicao{Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte -- IFRN \\ Campus Ceará-Mirim}
+
+\begin{document}
+\maketitle
+
+\begin{resumo}
+Laboratórios de informática de escolas públicas municipais frequentemente
+ficam parcialmente inoperantes por falta de manutenção técnica
+especializada, o que reduz o uso pedagógico do espaço. Este relatório tem
+como objetivo descrever a ação de extensão de manutenção preventiva e
+corretiva realizada no laboratório de informática da Escola Municipal
+Professora Iracema Dantas, em Ceará-Mirim/RN, executada por estudantes do
+curso Técnico Integrado em Informática do IFRN. A ação consistiu em
+diagnóstico individual de cada máquina, limpeza física, atualização de
+sistema operacional, remoção de softwares maliciosos e configuração de
+rede local, ao longo de seis visitas técnicas quinzenais. Do total de 18
+computadores do laboratório, 13 estavam parcial ou totalmente inoperantes
+no diagnóstico inicial; ao final da ação, 17 máquinas foram recolocadas em
+pleno funcionamento, restando 1 computador com defeito de placa-mãe sem
+reparo viável. A escola voltou a usar o laboratório em todas as turmas do
+turno vespertino, o que não ocorria havia mais de um ano. Conclui-se que a
+ação de extensão restabeleceu a infraestrutura de informática da escola
+parceira e proporcionou aos estudantes do IFRN experiência prática direta
+de manutenção de computadores em ambiente real de trabalho.
+
+\vspace{\onelineskip}
+\noindent
+\textbf{Palavras-chave}: Manutenção de computadores. Extensão. Laboratório de informática. Escola pública.
+\end{resumo}
+
+\textual
+
+\section{Introdução}
+
+A Escola Municipal Professora Iracema Dantas, localizada na zona rural de
+Ceará-Mirim/RN, possui um laboratório de informática com 18 computadores,
+montado em 2019 com recursos de um programa federal de inclusão digital.
+Sem quadro técnico próprio de TI, a escola dependia de visitas esporádicas
+da Secretaria Municipal de Educação para qualquer manutenção, o que, em
+2025, resultou em mais da metade das máquinas fora de uso e na suspensão
+das aulas de informática básica previstas no calendário escolar.
+
+O problema motivador desta ação de extensão foi justamente essa lacuna:
+uma escola pública com equipamento já disponível, mas inoperante por falta
+de manutenção técnica, e sem outro canal de suporte disponível no curto
+prazo. Essa situação está diretamente relacionada aos conteúdos das
+disciplinas de Organização e Manutenção de Computadores e Arquitetura de
+Redes de Computadores, do núcleo tecnológico do curso, o que justifica a
+ação como aplicação prática desses conhecimentos.
+
+O objetivo geral deste projeto foi restabelecer o funcionamento do
+laboratório de informática da escola parceira. Os objetivos específicos
+foram: (a) diagnosticar individualmente cada uma das 18 máquinas; (b)
+executar a manutenção preventiva e corretiva necessária em cada uma; e (c)
+configurar a rede local do laboratório para acesso à internet.
+
+Este relatório está organizado da seguinte forma: a seção 2 apresenta os
+conceitos técnicos que fundamentam a ação; a seção 3 descreve a
+metodologia e as atividades realizadas; a seção 4 apresenta os resultados
+e o impacto na escola parceira; e a seção 5 traz as considerações finais.
+
+\section{Fundamentação}
+
+A manutenção preventiva de computadores consiste em procedimentos
+regulares de limpeza física, verificação de temperatura dos componentes e
+atualização de software, realizados antes que uma falha ocorra, com o
+objetivo de prolongar a vida útil do equipamento. Já a manutenção
+corretiva atua após a identificação de uma falha específica, como
+travamentos frequentes, superaquecimento ou infecção por software
+malicioso (TORRES, 2016).
+
+Em laboratórios escolares compartilhados por muitos usuários, sem
+supervisão técnica constante, é comum o acúmulo de programas indesejados e
+a degradação do desempenho ao longo do tempo, o que reforça a necessidade
+de manutenção periódica, e não apenas corretiva pontual (ALENCAR;
+FERREIRA, 2019).
+
+No âmbito do IFRN, a extensão é compreendida como via de interação entre a
+instituição e a comunidade, capaz de proporcionar troca de conhecimento e
+qualificação profissional a ambas as partes envolvidas. Os conceitos de
+manutenção preventiva e corretiva, e de configuração de rede local,
+tratados nesta seção, são conteúdos da disciplina de Organização e
+Manutenção de Computadores e de Arquitetura de Redes de Computadores do
+curso, o que situa esta ação como aplicação direta desses conteúdos em
+contexto real.
+
+\section{Metodologia e Descrição das Atividades}
+
+Esta ação de extensão foi planejada em três etapas: diagnóstico,
+execução da manutenção e configuração de rede, realizadas ao longo de seis
+visitas técnicas quinzenais à Escola Municipal Professora Iracema Dantas,
+no período de agosto a novembro de 2026, conforme o plano de atividades da
+prática profissional deferido pela orientadora.
+
+O público atendido foi a comunidade escolar da instituição parceira: 18
+computadores do laboratório de informática, usados por aproximadamente 420
+estudantes matriculados nos turnos matutino e vespertino, e por 22
+professores da escola.
+
+Na primeira visita, cada um dos 18 computadores foi identificado e
+diagnosticado individualmente, registrando-se sintomas relatados pelos
+professores (lentidão, travamento, não ligar) e o estado físico do
+equipamento. Nas quatro visitas seguintes, foram executados: limpeza
+física interna (remoção de poeira, verificação de coolers), atualização
+do sistema operacional, remoção de softwares maliciosos identificados por
+antivírus, e substituição de três memórias RAM danificadas, doadas pelo
+IFRN a partir de equipamentos desativados. Na sexta e última visita, foi
+configurada a rede local do laboratório, com reorganização do cabeamento
+e verificação de acesso à internet em todas as máquinas recuperadas.
+
+Foram usados: kits de ferramentas de manutenção do laboratório do IFRN,
+software antivírus gratuito, mídia de instalação do sistema operacional
+Linux Ubuntu 22.04 (escolhido pela escola por não exigir licenciamento), e
+um roteador de reposição doado pelo IFRN para substituir o equipamento
+anterior, que apresentava defeito intermitente.
+
+\section{Resultados e Impacto}
+
+A Tabela \ref{tab:resultados-ext} apresenta a situação do laboratório
+antes e depois da ação de extensão.
+
+\begin{table}[!ht]
+  \centering
+  \caption{Situação do laboratório antes e depois da ação}
+  \label{tab:resultados-ext}
+  \begin{tabular}{lcc}
+    \hline
+    Situação & Antes & Depois \\
+    \hline
+    Computadores em pleno funcionamento & 5 & 17 \\
+    Computadores com defeito reparável  & 9 & 0  \\
+    Computadores com defeito irreparável & 4 & 1  \\
+    Total de computadores & 18 & 18 \\
+    \hline
+  \end{tabular}
+  \\[0.3em]
+  {\footnotesize Fonte: elaborado pelos autores (2026), a partir dos diagnósticos registrados nas visitas técnicas.}
+\end{table}
+
+Das 13 máquinas inoperantes ou parcialmente inoperantes no diagnóstico
+inicial, 12 foram recuperadas — das quais 3 exigiram troca de memória RAM
+e as demais foram resolvidas por limpeza, atualização de software ou
+remoção de malware. Apenas um computador permaneceu com defeito
+irreparável (placa-mãe queimada), cujo custo de reparo excedia o valor do
+equipamento.
+
+Segundo relato da direção da escola, colhido na última visita, o
+laboratório voltou a ser usado em todas as turmas do turno vespertino, o
+que não ocorria havia mais de um ano, e a coordenação pedagógica já
+reincluiu aulas de informática básica no planejamento do próximo bimestre.
+Esse resultado responde diretamente ao objetivo geral do projeto, que era
+restabelecer o funcionamento do laboratório, e ao terceiro objetivo
+específico, de configurar a rede local — as 17 máquinas recuperadas
+tiveram acesso à internet confirmado ao final da última visita.
+
+\section{Considerações Finais}
+
+Este relatório descreveu a ação de extensão de manutenção do laboratório
+de informática da Escola Municipal Professora Iracema Dantas, que
+recuperou 17 dos 18 computadores do laboratório e restabeleceu o uso
+pedagógico do espaço pela escola, respondendo ao objetivo proposto.
+
+Do ponto de vista da formação técnica, a ação permitiu aos estudantes do
+IFRN aplicar, em condições reais de trabalho e fora do ambiente controlado
+do laboratório do próprio câmpus, os conhecimentos de manutenção de
+computadores e configuração de rede estudados no curso, em diálogo direto
+com uma necessidade concreta da comunidade — o que caracteriza a unidade
+entre teoria e prática exigida pela prática profissional.
+
+Como limitação, a ação não incluiu treinamento dos professores da escola
+para pequenos reparos e manutenção básica, o que teria ampliado a
+autonomia da escola entre visitas futuras. Como continuidade, recomenda-se
+que o projeto seja renovado no próximo edital de extensão, incluindo uma
+oficina de manutenção básica para um professor de referência da escola,
+de modo a reduzir a dependência de novas visitas técnicas externas.
+
+\postextual
+
+\section*{Referências}
+
+\newcommand{\referencia}[1]{\par\noindent\hangindent=1cm #1\par\medskip}
+
+\referencia{ALENCAR, R. M.; FERREIRA, T. S. Manutenção preventiva em
+laboratórios de informática escolares: um estudo de caso em três escolas
+públicas. \textit{Revista Técnica de Informática Aplicada}, Natal, v. 4,
+n. 2, p. 45-58, 2019.}
+
+\referencia{TORRES, Gabriel. \textit{Hardware}: manual completo. 7. ed. Rio
+de Janeiro: Nova Terra, 2016.}
+
+
+\end{document}

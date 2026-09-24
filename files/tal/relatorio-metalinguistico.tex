@@ -1,0 +1,194 @@
+% ============================================================================
+% MODELO METALINGUÍSTICO — Relatório de TAL como Prática Profissional
+% Curso Técnico Integrado em Informática (PPC 2012) — IFRN Campus Ceará-Mirim
+% ============================================================================
+%
+% ATENÇÃO — MODELO PROVISÓRIO
+% A TAL (Tutoria de Aprendizagem e Laboratório) NÃO é, até o momento, uma
+% modalidade de prática profissional confirmada para o PPC 2012 — ver
+% "../README.md" desta pasta, que lista os problemas e as pendências antes
+% de qualquer deliberação do colegiado. Este modelo existe para ter pronto
+% o formato de entrega, SE e QUANDO o colegiado aprovar a modalidade. Não
+% oriente um(a) estudante a preencher isto como se já fosse aceito sem
+% checar o status da deliberação.
+%
+% O QUE É ESTE ARQUIVO
+% Cada seção deste modelo traz, dentro de um quadro em itálico, a explicação
+% do que essa seção deve conter (aparece no PDF gerado — não é comentário
+% oculto). Ao escrever o relatório de verdade, apague o quadro de instruções
+% e escreva o texto no lugar dele.
+% Para ver como fica um relatório já preenchido, com esse mesmo modelo, veja
+% o arquivo irmão "relatorio-exemplo-ficticio.tex".
+%
+% BASE NORMATIVA (resumida; ver ../README.md para o levantamento completo)
+%  - Res. 25/2019-CONSUP, Art. 3º, VI: lista TAL/PAFE entre as modalidades
+%    de prática profissional — mas o PPC 2012 não a menciona, e a OD 2024
+%    (Art. 291) também não a lista. Ver ../README.md, seções 2 e 3.
+%  - Estrutura do relatório aqui adaptada do modelo de extensão (a tutoria
+%    entre pares tem lógica parecida: um público — os alunos tutorados —
+%    é atendido por uma ação do estudante).
+%
+% Compila com pdflatex (rode duas vezes por causa de referências internas).
+% ============================================================================
+
+\documentclass[article,12pt,a4paper]{abntex2}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{times}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{microtype}
+
+% Quadro de instruções: tudo que estiver dentro deste ambiente é explicação
+% de apoio, não texto do relatório. Apague o ambiente inteiro (e o que está
+% dentro) ao escrever o conteúdo de verdade.
+\newenvironment{instrucoes}{%
+  \begin{quotation}\footnotesize\itshape
+  \noindent\textbf{\upshape Instruções desta seção — apague antes de entregar:}\par\smallskip
+}{%
+  \end{quotation}
+}
+
+% ---- Dados do trabalho (edite aqui) ----------------------------------------
+\renewcommand{\maketitlehookb}{}%% sem título em língua estrangeira (sem abstract)
+\titulo{[TÍTULO DO RELATÓRIO — Tutoria de Aprendizagem e Laboratório em (nome da disciplina)]}
+\autor{[Nome do(a) estudante tutor(a)] \and [Nome do(a) orientador(a)]\footnote{Professor(a) orientador(a) / supervisor(a) da TAL. [Titulação e lotação].}}
+\local{Ceará-Mirim -- RN}
+\data{[ano]}
+\instituicao{Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte -- IFRN \\ Campus Ceará-Mirim}
+
+\begin{document}
+\maketitle
+
+% =====================================================================
+\begin{resumo}
+\begin{instrucoes}
+Regras do resumo (NBR 6028, conforme o Guia do IFRN) — mesmas de qualquer relatório técnico:
+\begin{itemize}
+  \item Elemento obrigatório. Sequência de frases concisas, nunca uma lista de tópicos.
+  \item Parágrafo único, de 150 a 500 palavras, espaçamento 1,5.
+  \item Ordem fixa: objetivo $\to$ metodologia $\to$ resultados $\to$ conclusão. Para a TAL, "objetivo" é a dificuldade de aprendizagem que a tutoria pretendeu atender e "resultados" é o efeito sobre o desempenho dos alunos tutorados.
+  \item Verbo na voz ativa e na 3\textsuperscript{a} pessoa do singular.
+  \item Evitar símbolos, fórmulas, abreviações e citações.
+  \item Ao final, "Palavras-chave" em negrito, seguidas de 3 a 5 termos separados por ponto e finalizados por ponto.
+\end{itemize}
+\end{instrucoes}
+
+[Escreva aqui o resumo, seguindo as regras acima.]
+
+\vspace{\onelineskip}
+\noindent
+\textbf{Palavras-chave}: [Termo 1]. [Termo 2]. [Termo 3]. [Termo 4, opcional].
+\end{resumo}
+
+\textual
+
+% =====================================================================
+\section{Introdução}
+
+\begin{instrucoes}
+Esta seção precisa cumprir quatro pontos:
+\begin{enumerate}
+  \item \textbf{Contextualização}: qual disciplina técnica foi objeto da tutoria, e que dificuldade de aprendizagem dos colegas motivou a TAL (ex.: índice de reprovação, procura espontânea por ajuda). Isso liga a atividade à "aplicação de conhecimentos" exigida pelo PPC para valer como prática profissional — ver a ressalva de status em \texttt{../README.md}.
+  \item \textbf{Objetivo geral} (uma frase: o que a tutoria se propôs a melhorar) e, se fizer sentido, \textbf{objetivos específicos}.
+  \item \textbf{Estrutura do relatório}: uma frase final dizendo o que vem em cada seção seguinte.
+  \item Conexão com o \textbf{plano de atividades} deferido pelo(a) orientador(a)/supervisor(a) da TAL — se a modalidade for aceita, é o que a banca vai comparar na avaliação.
+\end{enumerate}
+\end{instrucoes}
+
+[Escreva aqui a introdução, cobrindo os pontos acima.]
+
+% =====================================================================
+\section{Fundamentação}
+
+\begin{instrucoes}
+Breve. Deve conter:
+\begin{itemize}
+  \item Os conceitos técnicos da disciplina tutorada mais relevantes para o que foi trabalhado nas sessões de tutoria, explicados na profundidade adequada a um trabalho de curso técnico.
+  \item Uma nota sobre o papel da tutoria entre pares na aprendizagem (não é obrigatório citar autor, mas se citar, referenciar corretamente).
+  \item Encerrar relacionando os conceitos com os conteúdos do núcleo tecnológico do curso.
+\end{itemize}
+\end{instrucoes}
+
+[Escreva aqui a fundamentação, com citações no formato autor-data quando houver.]
+
+% =====================================================================
+\section{Metodologia e Descrição das Atividades}
+
+\begin{instrucoes}
+Deve responder, nesta ordem:
+\begin{itemize}
+  \item \textbf{Planejamento}: carga horária semanal da tutoria, formato das sessões (individual, em grupo, plantão de dúvidas, apoio em laboratório), e como os alunos tutorados chegavam até a tutoria (indicação do professor da disciplina, procura espontânea etc.).
+  \item \textbf{Público atendido}: quantos alunos, de quantas turmas, participaram das sessões.
+  \item \textbf{Procedimento}: o que era feito em cada sessão — revisão de conteúdo, resolução de exercícios, apoio em atividades práticas de laboratório.
+  \item \textbf{Materiais} usados (listas de exercícios, roteiros de laboratório, material do professor da disciplina).
+  \item \textbf{Local e período} de realização.
+\end{itemize}
+\end{instrucoes}
+
+[Escreva aqui a metodologia e a descrição das atividades.]
+
+% =====================================================================
+\section{Resultados e Impacto}
+
+\begin{instrucoes}
+Deve conter:
+\begin{itemize}
+  \item Números concretos: quantidade de sessões realizadas, de alunos atendidos, de atendimentos totais.
+  \item Indicadores de resultado, se houver acesso a eles (ex.: nota média dos tutorados antes/depois, frequência às sessões, redução de procura por reoferta da disciplina) — sempre com a fonte do dado.
+  \item Percepção qualitativa: feedback dos alunos tutorados e/ou do professor da disciplina, se coletado.
+  \item Resposta explícita ao objetivo definido na introdução.
+\end{itemize}
+\end{instrucoes}
+
+[Escreva aqui os resultados e o impacto. Exemplo de tabela abaixo — apague se não for usar.]
+
+\begin{table}[!ht]
+  \centering
+  \caption{[Legenda da tabela, descrevendo o que ela mostra]}
+  \begin{tabular}{lcc}
+    \hline
+    [Indicador] & [Antes da TAL] & [Depois da TAL] \\
+    \hline
+    [Item A] & [valor] & [valor] \\{}
+    [Item B] & [valor] & [valor] \\
+    \hline
+  \end{tabular}
+  \\[0.3em]
+  {\footnotesize Fonte: [registros da tutoria / elaborado pelo(s) autor(es), ano].}
+\end{table}
+
+% =====================================================================
+\section{Considerações Finais}
+
+\begin{instrucoes}
+Deve conter:
+\begin{itemize}
+  \item Retomada do objetivo: a tutoria atendeu o que se propôs?
+  \item Síntese dos principais resultados.
+  \item Contribuição da tutoria: o que ela agregou aos alunos tutorados, e o que agregou à formação do(a) próprio(a) tutor(a) — este é o ponto que precisa demonstrar a "articulação entre teoria e prática" da prática profissional.
+  \item Limitações (ex.: baixa procura em algum período, dificuldade de conciliar horários).
+  \item Continuidade, se fizer sentido.
+\end{itemize}
+\end{instrucoes}
+
+[Escreva aqui as considerações finais.]
+
+\postextual
+
+% =====================================================================
+\section*{Referências}
+
+\begin{instrucoes}
+Regras (NBR 6023): ordem alfabética, um parágrafo por obra, recuo da segunda linha em diante. Se não houver fonte externa citada, inclua ao menos o material didático da disciplina tutorada usado como apoio.
+\end{instrucoes}
+
+\newcommand{\referencia}[1]{\par\noindent\hangindent=1cm #1\par\medskip}
+
+\referencia{SOBRENOME, Nome. \textit{Título do material didático da
+disciplina}. Edição. Local: Editora/IFRN, ano.}
+
+
+\end{document}

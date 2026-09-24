@@ -1,0 +1,164 @@
+% ============================================================================
+% Prática Profissional 2026 — Mostra Tecnológica
+% Apresentação para alunos do Curso Técnico Integrado em Informática
+% IFRN Campus Ceará-Mirim
+%
+% Fonte do conteúdo: 08-Pratica-Profissional/execucao-2026/readme.md (datas e
+% formato) e 08-Pratica-Profissional/pesquisa/ (estrutura do artigo, modelos).
+% Compila com pdflatex.
+% ============================================================================
+
+\documentclass[12pt,aspectratio=169]{beamer}
+
+\usetheme{metropolis}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+
+\definecolor{ifrnverde}{HTML}{2E8B3D}
+\definecolor{ifrnvermelho}{HTML}{C8102E}
+\setbeamercolor{palette primary}{bg=ifrnverde,fg=white}
+\setbeamercolor{frametitle}{bg=ifrnverde,fg=white}
+\setbeamercolor{progress bar}{fg=ifrnvermelho,bg=ifrnverde!30}
+\setbeamercolor{alerted text}{fg=ifrnvermelho}
+
+\title{Prática Profissional 2026}
+\subtitle{Mostra Tecnológica --- Pesquisa Acadêmico-Científica}
+\institute{IFRN --- Campus Ceará-Mirim}
+\date{}
+
+\begin{document}
+
+% ----------------------------------------------------------------------
+\begin{frame}[plain]
+  \begin{center}
+    \includegraphics[width=4cm]{ifrn-logo.png}\\[1.2cm]
+    {\Huge\bfseries Prática Profissional 2026}\\[0.4cm]
+    {\Large Mostra Tecnológica --- Pesquisa Acadêmico-Científica}\\[0.6cm]
+    {\large IFRN --- Campus Ceará-Mirim}
+  \end{center}
+\end{frame}
+
+% ----------------------------------------------------------------------
+\begin{frame}{O que vamos ver hoje}
+  \begin{enumerate}
+    \item Datas importantes
+    \item O que você precisa entregar
+    \item Estrutura do artigo
+    \item Como funciona a Mostra Tecnológica
+    \item Quem não puder apresentar
+    \item Onde conseguir o modelo
+  \end{enumerate}
+\end{frame}
+
+% ----------------------------------------------------------------------
+\begin{frame}{Datas importantes}
+  \begin{center}
+    \renewcommand{\arraystretch}{2.2}
+    \begin{tabular}{r l}
+      \alert{\Large 02/12} & {\Large Mostra Tecnológica} \\
+      \alert{\Large 11/12} & {\Large Entrega do PDF final (semana seguinte)} \\
+    \end{tabular}
+  \end{center}
+  \vfill
+\end{frame}
+
+% ----------------------------------------------------------------------
+\begin{frame}{O que você precisa entregar}
+  \begin{itemize}
+    \item Um \textbf{artigo científico} em PDF (não é um relatório de estágio).
+    \item \textbf{5 a 12 páginas}, contando da Introdução até o final das
+          Referências.
+    \begin{itemize}
+      \item O Resumo não entra nessa contagem.
+    \end{itemize}
+    \item Formato ABNT: papel A4, fonte Times New Roman ou Arial 12,
+          espaçamento 1,5.
+  \end{itemize}
+\end{frame}
+
+% ----------------------------------------------------------------------
+\begin{frame}{Estrutura do artigo}
+  \begin{center}
+    \begin{tabular}{c l}
+      & Resumo \\
+      \textbf{1} & Introdução \\
+      \textbf{2} & Fundamentação Teórica \\
+      \textbf{3} & Metodologia \\
+      \textbf{4} & Resultados e Discussão \\
+      \textbf{5} & Conclusão \\
+      & Referências \\
+    \end{tabular}
+  \end{center}
+\end{frame}
+
+% ----------------------------------------------------------------------
+\begin{frame}{O que cada seção precisa ter}
+  \begin{itemize}
+    \item \textbf{Introdução}: contexto, o problema que você investigou,
+          objetivo geral (e específicos, se houver).
+    \item \textbf{Fundamentação Teórica}: os conceitos técnicos que
+          embasam o trabalho, com citação de autores (não é só copiar e
+          colar).
+    \item \textbf{Metodologia}: o que você fez, com quê, como e quando ---
+          detalhado o bastante para alguém repetir.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{O que cada seção precisa ter (cont.)}
+  \begin{itemize}
+    \item \textbf{Resultados e Discussão}: o que você encontrou, e o que
+          isso significa --- não é só ``colar números''.
+    \item \textbf{Conclusão}: retoma o objetivo, resume o que foi
+          encontrado, diz a contribuição do trabalho. Sem dado novo aqui.
+    \item \textbf{Referências}: tudo que você citou no texto, e só o que
+          você citou.
+  \end{itemize}
+\end{frame}
+
+% ----------------------------------------------------------------------
+\begin{frame}{Como funciona a Mostra Tecnológica}
+  \begin{itemize}
+    \item Você apresenta o trabalho publicamente, para visitantes externos
+    \item Professores escolhidos pelo avaliador visitam e avaliam seu trabalho.
+    \item Nota de 0 a 100 --- aprovação com, no mínimo, 60 pontos.
+    \item Apresentar na Mostra \textbf{já cumpre} a etapa de banca da
+          prática profissional.
+    \item Orientador avalia texto final e entrega nota final
+  \end{itemize}
+\end{frame}
+
+% ----------------------------------------------------------------------
+\begin{frame}{Quem não puder apresentar na Mostra}
+  \begin{alertblock}{Banca à parte}
+    Quem não apresentar no dia da Mostra Tecnológica (02/12) terá uma
+    \textbf{banca marcada separadamente} para avaliar o artigo.
+  \end{alertblock}
+  \vfill
+  Procure a coordenação ou seu(sua) orientador(a) com antecedência se
+  souber que não vai conseguir participar da Mostra. Trabalharemos no agendamento.
+\end{frame}
+
+% ----------------------------------------------------------------------
+\begin{frame}{Onde conseguir o modelo}
+  \begin{itemize}
+    \item A coordenação tem um \textbf{modelo de artigo} pronto, em Word e
+          em LaTeX:
+    \begin{itemize}
+      \item uma versão \textbf{explicada}, com instruções em cada seção;
+      \item uma versão com um \textbf{exemplo fictício} preenchido, para
+            você ver como o artigo pronto deve ficar.
+    \end{itemize}
+    \item Peça o modelo ao(à) seu(sua) orientador(a) ou diretamente à
+          coordenação de curso.
+  \end{itemize}
+  Um link para o repositório será disponibilizado por e-mail/GSA.
+\end{frame}
+
+% ----------------------------------------------------------------------
+\begin{frame}[standout]
+  Dúvidas?
+\end{frame}
+
+\end{document}

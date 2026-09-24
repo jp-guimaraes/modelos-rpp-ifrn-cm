@@ -1,0 +1,205 @@
+% ============================================================================
+% MODELO METALINGUÍSTICO — Relatório de Estágio como Prática Profissional
+% Curso Técnico Integrado em Informática (PPC 2012) — IFRN Campus Ceará-Mirim
+% ============================================================================
+%
+% O QUE É ESTE ARQUIVO
+% Cada seção deste modelo traz, dentro de um quadro em itálico, a explicação
+% do que essa seção deve conter (aparece no PDF gerado — não é comentário
+% oculto). Ao escrever o relatório de verdade, apague o quadro de instruções
+% e escreva o texto no lugar dele.
+% Para ver como fica um relatório já preenchido, com esse mesmo modelo, veja
+% o arquivo irmão "relatorio-exemplo-ficticio.tex".
+%
+% Diferente dos modelos de pesquisa e de extensão (que a coordenação teve de
+% adaptar de um guia genérico), a estrutura abaixo segue de perto o "Guia
+% Prático para Relatório Técnico ou Científico" da Biblioteca do IFRN
+% (2011), que foi escrito pensando especificamente em relatório de estágio.
+%
+% BASE NORMATIVA (resumida; ver README.md desta pasta para os artigos
+% citados)
+%  - OD 2024, Art. 317: ao final do estágio (obrigatório ou não), o(a)
+%    estudante apresenta relatório técnico.
+%  - OD 2024, Art. 296: ABNT para redação de trabalhos técnicos e científicos.
+%  - OD 2024, Art. 297: relatório final de estágio entra no acervo
+%    bibliográfico, em versão eletrônica e exemplar impresso e encadernado.
+%  - OD 2024, Art. 304: avaliação por banca (orientador(a) + professores das
+%    disciplinas vinculadas), nota de 0 a 100, aprovação com mínimo de 60.
+%  - OD 2024, Art. 300, §2º: prazo de 30 dias após concluir o estágio, no
+%    técnico integrado, para entregar o documento ao(à) orientador(a).
+%  - Lei nº 11.788/2008: lei geral do estágio.
+%  - Guia Prático para Relatório Técnico ou Científico (Biblioteca do IFRN,
+%    2011, NBR 10719:2011): estrutura de desenvolvimento (Estágio Curricular,
+%    Caracterização da Empresa, Infraestrutura e Recursos Humanos,
+%    Atividades Desenvolvidas) usada neste modelo.
+%
+% Compila com pdflatex (rode duas vezes por causa de referências internas).
+% ============================================================================
+
+\documentclass[article,12pt,a4paper]{abntex2}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{times}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{microtype}
+
+% Quadro de instruções: tudo que estiver dentro deste ambiente é explicação
+% de apoio, não texto do relatório. Apague o ambiente inteiro (e o que está
+% dentro) ao escrever o conteúdo de verdade.
+\newenvironment{instrucoes}{%
+  \begin{quotation}\footnotesize\itshape
+  \noindent\textbf{\upshape Instruções desta seção — apague antes de entregar:}\par\smallskip
+}{%
+  \end{quotation}
+}
+
+% ---- Dados do trabalho (edite aqui) ----------------------------------------
+\renewcommand{\maketitlehookb}{}%% sem título em língua estrangeira (sem abstract)
+\titulo{[TÍTULO DO RELATÓRIO — Relatório de Estágio Curricular na (nome da concedente)]}
+\autor{[Nome do(a) estudante] \and [Nome do(a) orientador(a)]\footnote{Professor(a) orientador(a). [Titulação e lotação].}}
+\local{Ceará-Mirim -- RN}
+\data{[ano]}
+\instituicao{Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte -- IFRN \\ Campus Ceará-Mirim}
+
+\begin{document}
+\maketitle
+
+% =====================================================================
+\begin{resumo}
+\begin{instrucoes}
+Regras do resumo (NBR 6028, conforme o Guia do IFRN) — mesmas de qualquer relatório técnico:
+\begin{itemize}
+  \item Elemento obrigatório. Sequência de frases concisas, nunca uma lista de tópicos.
+  \item Parágrafo único, de 150 a 500 palavras, espaçamento 1,5.
+  \item Ordem fixa: objetivo $\to$ metodologia $\to$ resultados $\to$ conclusão. Para estágio, "objetivo" é o que se esperava do estágio e "resultados" é o que foi de fato desenvolvido/aprendido.
+  \item Verbo na voz ativa e na 3\textsuperscript{a} pessoa do singular.
+  \item Evitar símbolos, fórmulas, abreviações e citações.
+  \item Ao final, "Palavras-chave" em negrito, seguidas de 3 a 5 termos separados por ponto e finalizados por ponto.
+\end{itemize}
+\end{instrucoes}
+
+[Escreva aqui o resumo, seguindo as regras acima.]
+
+\vspace{\onelineskip}
+\noindent
+\textbf{Palavras-chave}: [Termo 1]. [Termo 2]. [Termo 3]. [Termo 4, opcional].
+\end{resumo}
+
+\textual
+
+% =====================================================================
+\section{Introdução}
+
+\begin{instrucoes}
+Segundo o Guia da Biblioteca: "uma visão geral do conteúdo do relatório, sem qualquer comentário histórico. Apresenta os objetivos do relatório e as razões de sua elaboração." Na prática, cubra:
+\begin{enumerate}
+  \item Uma frase de contexto: o que motivou a busca pelo estágio e sua relação com a área técnica do curso (Informática) — é o que caracteriza a "aplicação de conhecimentos" exigida pelo PPC (seção 5.2) para valer como prática profissional.
+  \item O objetivo do relatório: registrar e refletir sobre as atividades desenvolvidas no estágio.
+  \item Conexão com o \textbf{Plano de Estágio} assinado por você, pelo(a) orientador(a) e pelo(a) supervisor(a) técnico(a) (OD 2024, Art. 313, II) — é o que a banca vai comparar na avaliação (Art. 304).
+  \item Uma frase final dizendo o que vem em cada seção seguinte.
+\end{enumerate}
+\end{instrucoes}
+
+[Escreva aqui a introdução.]
+
+% =====================================================================
+\section{Estágio Curricular}
+
+\begin{instrucoes}
+Segundo o Guia: "descrever brevemente: a lei; objetivo; carga horária; jornada de trabalho." Cubra:
+\begin{itemize}
+  \item A lei que rege o estágio: Lei nº 11.788, de 25 de setembro de 2008 (Lei do Estágio), e a normativa interna do IFRN (OD 2024, Arts. 307 a 319).
+  \item Se o estágio é obrigatório ou não obrigatório, conforme definido no plano.
+  \item Objetivo do estágio (OD 2024, Art. 308): exercitar a prática profissional aliando teoria e prática; facilitar o ingresso no mundo do trabalho; promover a integração do IFRN com a sociedade.
+  \item Carga horária total contratada e jornada (horas diárias/semanais), conforme o Termo de Compromisso.
+  \item Período de realização (data de início e de término).
+\end{itemize}
+\end{instrucoes}
+
+[Escreva aqui os dados formais do estágio: lei, objetivo, carga horária, jornada.]
+
+% =====================================================================
+\section{Caracterização da Concedente}
+
+\begin{instrucoes}
+Segundo o Guia: "o local em que funciona; o fluxo de serviço; os tipos de serviço" (Caracterização da Empresa) e "equipamentos; quantitativo de recursos humanos" (Infraestrutura e Recursos Humanos). Junte os dois nesta seção:
+\begin{itemize}
+  \item Nome da concedente (empresa, instituição pública, ONG) e ramo de atuação.
+  \item Local onde funciona (endereço, estrutura física relevante ao seu trabalho).
+  \item Fluxo e tipos de serviço prestados pela concedente.
+  \item Infraestrutura de TI relevante ao seu estágio: equipamentos, rede, sistemas usados.
+  \item Quantitativo de recursos humanos: quantos funcionários, e quantos no setor onde você atuou.
+\end{itemize}
+\end{instrucoes}
+
+[Escreva aqui a caracterização da concedente.]
+
+% =====================================================================
+\section{Atividades Desenvolvidas}
+
+\begin{instrucoes}
+Segundo o Guia: "especificar os setores. Fazer um relato detalhado das atividades desenvolvidas em cada setor (separadamente)", respondendo, para cada atividade:
+\begin{itemize}
+  \item O que foi feito?
+  \item Por que foi feito?
+  \item Como foi feito?
+  \item Qual a aprendizagem com a atividade?
+\end{itemize}
+Se você atuou em mais de um setor ou tipo de atividade, use uma subseção para cada um (\texttt{\textbackslash subsection\{...\}}). Relacione as atividades com os conteúdos das disciplinas do núcleo tecnológico do curso — é o que demonstra a "unidade entre teoria e prática" exigida pelo PPC (seção 5.2).
+\end{instrucoes}
+
+[Escreva aqui, setor por setor, o relato detalhado das atividades.]
+
+\subsection{[Nome do setor ou tipo de atividade 1]}
+
+[O que foi feito, por que, como, e o que foi aprendido.]
+
+\subsection{[Nome do setor ou tipo de atividade 2, se houver]}
+
+[O que foi feito, por que, como, e o que foi aprendido.]
+
+% =====================================================================
+\section{Considerações Finais}
+
+\begin{instrucoes}
+Segundo o Guia: "comentar se o estágio realizado foi satisfatório, se o tempo foi suficiente, como sentiu o contato com os técnicos e com os futuros colegas de profissão. Fazer uma correlação entre o estágio prático e os conhecimentos teóricos adquiridos nas disciplinas relacionadas [...]. Podem-se inserir sugestões e recomendações." Cubra:
+\begin{itemize}
+  \item Avaliação geral: o estágio atendeu ao que se esperava? O tempo foi suficiente?
+  \item Correlação entre a prática do estágio e os conteúdos teóricos das disciplinas do curso — este é o ponto central para caracterizar a prática profissional (PPC 2012, seção 5.2).
+  \item Relacionamento com a equipe da concedente e contribuição para a formação profissional.
+  \item Sugestões e recomendações, se houver, para quem vier depois.
+  \item Não introduzir atividade nova aqui: esta seção só reflete sobre o que já foi relatado.
+\end{itemize}
+\end{instrucoes}
+
+[Escreva aqui as considerações finais.]
+
+\postextual
+
+% =====================================================================
+\section*{Referências}
+
+\begin{instrucoes}
+Regras (NBR 6023):
+\begin{itemize}
+  \item Ordem alfabética pelo sobrenome do primeiro autor (ou pelo nome da instituição, para a lei e a documentação da concedente).
+  \item Um parágrafo por obra, sem numeração, com recuo da segunda linha em diante.
+  \item Inclua ao menos a Lei nº 11.788/2008, mesmo que não citada diretamente no texto, por ser a base legal do estágio.
+\end{itemize}
+Exemplo de formato:
+\end{instrucoes}
+
+\newcommand{\referencia}[1]{\par\noindent\hangindent=1cm #1\par\medskip}
+
+\referencia{BRASIL. \textit{Lei nº 11.788, de 25 de setembro de 2008}.
+Dispõe sobre o estágio de estudantes. Brasília, DF: Diário Oficial da
+União, 2008.}
+
+\referencia{NOME DA CONCEDENTE. \textit{Título do documento institucional
+consultado} (se houver). Local: [Concedente], ano.}
+
+
+\end{document}

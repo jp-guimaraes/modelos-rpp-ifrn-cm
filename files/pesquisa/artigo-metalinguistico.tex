@@ -1,0 +1,232 @@
+% ============================================================================
+% MODELO METALINGUÍSTICO — Artigo científico como Prática Profissional
+% Curso Técnico Integrado em Informática (PPC 2012) — IFRN Campus Ceará-Mirim
+% ============================================================================
+%
+% O QUE É ESTE ARQUIVO
+% Cada seção deste modelo traz, dentro de um quadro em itálico, a explicação
+% do que essa seção deve conter (essa explicação aparece no PDF gerado — não
+% é um comentário oculto). Ao escrever o artigo de verdade, apague o quadro
+% de instruções e escreva o texto no lugar dele.
+% Para ver como fica um artigo já preenchido, com esse mesmo modelo, veja o
+% arquivo irmão "artigo-exemplo-ficticio.tex".
+%
+% BASE NORMATIVA (resumida; ver README.md desta pasta para os artigos citados)
+%  - Organização Didática 2024 (Res. 26/2024-CONSUP), Art. 296: o(s) relatório(s)
+%    devem seguir as normas da ABNT para redação de trabalhos técnicos e científicos.
+%  - OD 2024, Art. 291, I, "b": pesquisa acadêmico-científica registrada por
+%    monografia, artigo científico ou pedido de proteção intelectual.
+%  - OD 2024, Art. 305: com base no projeto desenvolvido, o(a) estudante produz
+%    relatório técnico (ou, nesta modalidade, o artigo) no período do projeto.
+%  - OD 2024, Art. 304: avaliação por banca (orientador(a) + professores das
+%    disciplinas vinculadas), nota de 0 a 100, aprovação com mínimo de 60.
+%  - OD 2024, Art. 300, §2º: prazo de 30 dias após concluir o projeto, no
+%    técnico integrado, para entregar o documento ao(à) orientador(a).
+%  - Res. 25/2019-CONSUP, Art. 46, I: o plano/trabalho deve ser adequado à
+%    área de formação do(a) estudante.
+%  - PPC 2012, seção 5.2.1: a prática profissional exige unidade entre teoria
+%    e prática e aplicação dos conhecimentos do curso, com vistas à
+%    intervenção na realidade.
+%  - Guia Prático para Relatório Técnico ou Científico (Biblioteca do IFRN,
+%    2011, NBR 10719:2011): estrutura pré-textual/textual/pós-textual e
+%    regras de formatação (usadas neste modelo).
+%
+% Compila com pdflatex (rode duas vezes por causa de referências internas).
+% ============================================================================
+
+\documentclass[article,12pt,a4paper]{abntex2}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{times}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+
+% Cabeçalho institucional: logo do IFRN + identificação do Campus, em todas
+% as páginas do artigo.
+\pagestyle{fancy}
+\setlength{\headheight}{30pt}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyhead[L]{\includegraphics[height=0.9cm]{ifrn-logo.png}}
+\fancyhead[R]{\textit{IFRN -- Campus Ceará-Mirim}}
+\fancyfoot[C]{\thepage}
+
+% Quadro de instruções: tudo que estiver dentro deste ambiente é explicação
+% de apoio, não texto do artigo. Apague o ambiente inteiro (e o que está
+% dentro) ao escrever o conteúdo de verdade.
+\newenvironment{instrucoes}{%
+  \begin{quotation}\footnotesize\itshape
+  \noindent\textbf{\upshape Instruções desta seção — apague antes de entregar:}\par\smallskip
+}{%
+  \end{quotation}
+}
+
+% ---- Dados do trabalho (edite aqui) ----------------------------------------
+\renewcommand{\maketitlehookb}{}%% sem título em língua estrangeira (sem abstract)
+\titulo{[TÍTULO DO ARTIGO EM PORTUGUÊS — claro, específico, sem sigla não explicada]}
+\autor{[Nome do(a) estudante] \and [Nome do(a) coautor(a), se houver] \and [Nome do(a) orientador(a)]\footnote{Professor(a) orientador(a). [Titulação e lotação].}}
+\local{Ceará-Mirim -- RN}
+\data{[ano]}
+\instituicao{Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte -- IFRN \\ Campus Ceará-Mirim}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+\begin{instrucoes}
+Formato exigido do artigo: 5 a 12 páginas, contadas da Introdução ao final
+das Referências.
+\end{instrucoes}
+
+\begin{resumo}
+\begin{instrucoes}
+Regras do resumo (NBR 6028, conforme o Guia do IFRN):
+\begin{itemize}
+  \item Elemento obrigatório. Sequência de frases concisas, nunca uma lista de tópicos.
+  \item Parágrafo único, de 150 a 500 palavras, espaçamento 1,5.
+  \item Ordem fixa dentro do parágrafo: objetivo $\to$ metodologia $\to$ resultados $\to$ conclusão.
+  \item Verbo na voz ativa e na 3\textsuperscript{a} pessoa do singular ("O trabalho investiga...", nunca "Investigamos..." nem "Será investigado...").
+  \item Evitar símbolos, fórmulas, abreviações e citações.
+  \item Ao final, "Palavras-chave" em negrito, seguidas de 3 a 5 termos separados por ponto e finalizados por ponto.
+\end{itemize}
+\end{instrucoes}
+
+[Escreva aqui o resumo, seguindo as regras acima.]
+
+\vspace{\onelineskip}
+\noindent
+\textbf{Palavras-chave}: [Termo 1]. [Termo 2]. [Termo 3]. [Termo 4, opcional].
+\end{resumo}
+
+\textual
+\pagestyle{fancy}
+
+% =====================================================================
+\section{Introdução}
+
+\begin{instrucoes}
+Esta seção precisa cumprir cinco pontos:
+\begin{enumerate}
+  \item \textbf{Contextualização}: por que o tema importa, e sua relação com a área técnica do curso (Informática) — é o que caracteriza a "aplicação de conhecimentos" exigida pelo PPC (seção 5.2.1) para valer como prática profissional, e não apenas curiosidade pessoal.
+  \item \textbf{Problema/justificativa}: qual pergunta ou lacuna o trabalho responde, e por que vale a pena investigá-la (relevância técnica, social ou acadêmica).
+  \item \textbf{Objetivo geral} (uma frase, o que o trabalho pretende alcançar) e, se fizer sentido, \textbf{objetivos específicos} (lista curta de passos).
+  \item \textbf{Estrutura do artigo}: uma frase final dizendo o que vem em cada seção seguinte ("A seção 2 apresenta...; a seção 3 descreve...").
+  \item Deixar claro como o trabalho se conecta ao \textbf{plano de atividades} deferido pelo(a) orientador(a) (Res. 25/2019, Art. 4º, IV) — é o que a banca vai comparar na avaliação (OD 2024, Art. 304).
+\end{enumerate}
+\end{instrucoes}
+
+[Escreva aqui a introdução, cobrindo os cinco pontos acima.]
+
+% =====================================================================
+\section{Fundamentação Teórica}
+
+\begin{instrucoes}
+Também chamada de "Referencial Teórico". Deve conter:
+\begin{itemize}
+  \item Os conceitos técnicos necessários para entender o restante do artigo, explicados (não apenas citados), na profundidade adequada a um trabalho de curso técnico.
+  \item Trabalhos relacionados: outras pesquisas, manuais técnicos ou documentação oficial sobre o mesmo tema, mostrando o que já existe e onde este trabalho se encaixa.
+  \item Toda citação de outro autor segue a NBR 10520 (citação direta entre aspas com página; citação indireta sem aspas, sempre com autor e ano).
+  \item Cada obra citada no texto tem de aparecer, depois, na seção de Referências — e vice-versa: não citar no texto o que não está nas referências, nem listar o que não foi citado.
+  \item Encerrar relacionando os conceitos apresentados com os conteúdos das disciplinas do núcleo tecnológico do curso (demonstra a "unidade entre teoria e prática" exigida pelo PPC, seção 5.2.1).
+\end{itemize}
+\end{instrucoes}
+
+[Escreva aqui a fundamentação teórica, com citações no formato autor-data, por
+exemplo: "Segundo Silva (2020), ..." ou "(SILVA, 2020, p. 12)".]
+
+% =====================================================================
+\section{Metodologia}
+
+\begin{instrucoes}
+Deve responder, nesta ordem:
+\begin{itemize}
+  \item \textbf{Tipo de pesquisa} (exploratória, experimental, estudo de caso, desenvolvimento tecnológico, pesquisa bibliográfica etc.) e por que esse tipo foi escolhido.
+  \item \textbf{Materiais}: ferramentas, equipamentos, softwares ou ambientes usados, com versão/especificação quando for relevante para reproduzir o trabalho.
+  \item \textbf{Procedimento}: passo a passo do que foi feito, em que ordem, e como os dados (ou resultados) foram coletados ou produzidos.
+  \item \textbf{Local e período} de realização, compatíveis com o plano de atividades deferido pelo(a) orientador(a) e com o prazo de entrega (30 dias após concluir o projeto, no técnico integrado — OD 2024, Art. 300, §2º).
+\end{itemize}
+Esta seção deve ser detalhada o bastante para que outra pessoa consiga repetir o que foi feito.
+\end{instrucoes}
+
+[Escreva aqui a metodologia, respondendo: o quê, com quê, como e quando.]
+
+% =====================================================================
+\section{Resultados e Discussão}
+
+\begin{instrucoes}
+Deve conter:
+\begin{itemize}
+  \item Apresentação dos dados/resultados obtidos, com tabelas, gráficos ou figuras quando ajudarem a entender (título acima da tabela e abaixo da figura, conforme NBR 14724).
+  \item Discussão: o que os resultados significam, à luz da fundamentação teórica (eles confirmam, contradizem ou complementam o que outros autores encontraram?).
+  \item Resposta explícita ao objetivo e, se houver, a cada objetivo específico definido na introdução.
+  \item Não é só "colar números": é explicar o que eles mostram.
+\end{itemize}
+\end{instrucoes}
+
+[Escreva aqui os resultados e a discussão. Exemplo de tabela abaixo — apague se não for usar.]
+
+\begin{table}[!ht]
+  \centering
+  \caption{[Legenda da tabela, descrevendo o que ela mostra]}
+  \begin{tabular}{lcc}
+    \hline
+    [Categoria] & [Medida 1] & [Medida 2] \\
+    \hline
+    [Item A] & [valor] & [valor] \\{}
+    [Item B] & [valor] & [valor] \\
+    \hline
+  \end{tabular}
+  \\[0.3em]
+  {\footnotesize Fonte: [dados da pesquisa / elaborado pelo(s) autor(es), ano].}
+\end{table}
+
+% =====================================================================
+\section{Conclusão}
+
+\begin{instrucoes}
+Deve conter:
+\begin{itemize}
+  \item Retomada do objetivo: o trabalho alcançou o que se propôs? Como?
+  \item Síntese dos principais resultados, sem repetir números já mostrados na seção anterior em detalhe.
+  \item Contribuição do trabalho: o que ele agrega, tecnicamente ou para a formação do(a) estudante — este é o ponto em que se demonstra a "articulação entre teoria e prática" que caracteriza a prática profissional (PPC 2012, seção 5.2.1), e não só o cumprimento de uma tarefa acadêmica isolada.
+  \item Limitações do trabalho (o que não foi possível fazer ou testar, e por quê).
+  \item Sugestões de trabalhos futuros, se houver.
+  \item Não introduzir dado ou citação nova aqui: esta seção só retoma o que já foi mostrado.
+\end{itemize}
+\end{instrucoes}
+
+[Escreva aqui a conclusão.]
+
+\postextual
+
+% =====================================================================
+\section*{Referências}
+
+\begin{instrucoes}
+Regras (NBR 6023):
+\begin{itemize}
+  \item Ordem alfabética pelo sobrenome do primeiro autor.
+  \item Um parágrafo por obra, sem numeração, com recuo da segunda linha em diante.
+  \item Todo item citado no texto (seção "Fundamentação Teórica" e demais) precisa estar aqui, e só o que foi citado deve estar aqui.
+\end{itemize}
+Exemplos de formato por tipo de fonte (adapte ao que você usou):
+\end{instrucoes}
+
+\newcommand{\referencia}[1]{\par\noindent\hangindent=1cm #1\par\medskip}
+
+\referencia{SOBRENOME, Nome. \textit{Título da obra}: subtítulo se houver.
+Edição. Local de publicação: Editora, ano.}
+
+\referencia{SOBRENOME, Nome. Título do artigo. \textit{Nome da Revista ou
+Periódico}, Local, v. X, n. X, p. XX-XX, ano.}
+
+\referencia{NOME DA INSTITUIÇÃO. \textit{Título do documento eletrônico}.
+Local: Instituição, ano. Disponível em: \texttt{https://endereco-completo}.
+Acesso em: dia mês ano.}
+
+\end{document}

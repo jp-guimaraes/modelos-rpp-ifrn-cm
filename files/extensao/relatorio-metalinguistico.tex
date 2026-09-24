@@ -1,0 +1,210 @@
+% ============================================================================
+% MODELO METALINGUÍSTICO — Relatório Técnico de Extensão como Prática Profissional
+% Curso Técnico Integrado em Informática (PPC 2012) — IFRN Campus Ceará-Mirim
+% ============================================================================
+%
+% O QUE É ESTE ARQUIVO
+% Cada seção deste modelo traz, dentro de um quadro em itálico, a explicação
+% do que essa seção deve conter (aparece no PDF gerado — não é comentário
+% oculto). Ao escrever o relatório de verdade, apague o quadro de instruções
+% e escreva o texto no lugar dele.
+% Para ver como fica um relatório já preenchido, com esse mesmo modelo, veja
+% o arquivo irmão "relatorio-exemplo-ficticio.tex".
+%
+% BASE NORMATIVA (resumida; ver README.md desta pasta e de ../ para os
+% artigos citados)
+%  - OD 2024, Art. 291, I, "a": projeto de extensão registrado por relatório
+%    técnico (mesmo caminho do projeto de pesquisa/integrador — não há
+%    modalidade "artigo científico" para extensão).
+%  - OD 2024, Art. 296: ABNT para redação de trabalhos técnicos e científicos.
+%  - OD 2024, Art. 305: relatório produzido com base no projeto desenvolvido,
+%    no período de realização do projeto.
+%  - OD 2024, Art. 304: avaliação por banca (orientador(a) + professores das
+%    disciplinas vinculadas), nota de 0 a 100, aprovação com mínimo de 60.
+%  - OD 2024, Art. 300, §2º: prazo de 30 dias após concluir o projeto, no
+%    técnico integrado, para entregar o documento ao(à) orientador(a).
+%  - PPC 2012, seção 5.2.1: unidade entre teoria e prática, aplicação dos
+%    conhecimentos do curso, intervenção no mundo do trabalho e na realidade
+%    social — para extensão, isso significa mostrar a que necessidade
+%    concreta da comunidade/instituição parceira o projeto respondeu.
+%  - Guia Prático para Relatório Técnico ou Científico (Biblioteca do IFRN,
+%    2011, NBR 10719:2011): estrutura e formatação usadas neste modelo.
+%
+% Compila com pdflatex (rode duas vezes por causa de referências internas).
+% ============================================================================
+
+\documentclass[article,12pt,a4paper]{abntex2}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{times}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{microtype}
+
+% Quadro de instruções: tudo que estiver dentro deste ambiente é explicação
+% de apoio, não texto do relatório. Apague o ambiente inteiro (e o que está
+% dentro) ao escrever o conteúdo de verdade.
+\newenvironment{instrucoes}{%
+  \begin{quotation}\footnotesize\itshape
+  \noindent\textbf{\upshape Instruções desta seção — apague antes de entregar:}\par\smallskip
+}{%
+  \end{quotation}
+}
+
+% ---- Dados do trabalho (edite aqui) ----------------------------------------
+\renewcommand{\maketitlehookb}{}%% sem título em língua estrangeira (sem abstract)
+\titulo{[TÍTULO DO RELATÓRIO — nome da ação de extensão + instituição/comunidade atendida]}
+\autor{[Nome do(a) estudante] \and [Nome do(a) coautor(a), se houver] \and [Nome do(a) orientador(a)]\footnote{Professor(a) orientador(a). [Titulação e lotação].}}
+\local{Ceará-Mirim -- RN}
+\data{[ano]}
+\instituicao{Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte -- IFRN \\ Campus Ceará-Mirim}
+
+\begin{document}
+\maketitle
+
+% =====================================================================
+\begin{resumo}
+\begin{instrucoes}
+Regras do resumo (NBR 6028, conforme o Guia do IFRN) — mesmas de qualquer relatório técnico:
+\begin{itemize}
+  \item Elemento obrigatório. Sequência de frases concisas, nunca uma lista de tópicos.
+  \item Parágrafo único, de 150 a 500 palavras, espaçamento 1,5.
+  \item Ordem fixa: objetivo $\to$ metodologia $\to$ resultados $\to$ conclusão. Para extensão, "objetivo" é a necessidade atendida e "resultados" é o benefício gerado ao público.
+  \item Verbo na voz ativa e na 3\textsuperscript{a} pessoa do singular.
+  \item Evitar símbolos, fórmulas, abreviações e citações.
+  \item Ao final, "Palavras-chave" em negrito, seguidas de 3 a 5 termos separados por ponto e finalizados por ponto.
+\end{itemize}
+\end{instrucoes}
+
+[Escreva aqui o resumo, seguindo as regras acima.]
+
+\vspace{\onelineskip}
+\noindent
+\textbf{Palavras-chave}: [Termo 1]. [Termo 2]. [Termo 3]. [Termo 4, opcional].
+\end{resumo}
+
+\textual
+
+% =====================================================================
+\section{Introdução}
+
+\begin{instrucoes}
+Esta seção precisa cumprir cinco pontos, adaptados ao caráter extensionista do projeto:
+\begin{enumerate}
+  \item \textbf{Contextualização}: qual é a instituição, escola, comunidade ou público que o projeto atendeu, e qual necessidade concreta dele motivou a ação — é o que caracteriza a "intervenção no mundo do trabalho e na realidade social" exigida pelo PPC (seção 5.2.1) para valer como prática profissional.
+  \item \textbf{Justificativa}: por que essa necessidade merecia ser atendida por um projeto de extensão do curso, e não resolvida de outra forma; qual a relação com a área técnica do curso (Informática).
+  \item \textbf{Objetivo geral} (uma frase: o que o projeto se propôs a entregar ao público atendido) e, se fizer sentido, \textbf{objetivos específicos}.
+  \item \textbf{Estrutura do relatório}: uma frase final dizendo o que vem em cada seção seguinte.
+  \item Conexão com o \textbf{plano de atividades} deferido pelo(a) orientador(a) (Res. 25/2019, Art. 4º, IV) — é o que a banca vai comparar na avaliação (OD 2024, Art. 304).
+\end{enumerate}
+\end{instrucoes}
+
+[Escreva aqui a introdução, cobrindo os cinco pontos acima.]
+
+% =====================================================================
+\section{Fundamentação}
+
+\begin{instrucoes}
+Mais breve do que num relatório de pesquisa. Deve conter:
+\begin{itemize}
+  \item Os conceitos técnicos necessários para entender as atividades realizadas (ex.: os fundamentos de manutenção de hardware, redes, ou o que for pertinente ao serviço prestado), explicados na profundidade adequada a um trabalho de curso técnico.
+  \item Uma breve nota sobre o papel da extensão no IFRN: articulação entre ensino, pesquisa e extensão, e via de mão dupla entre a instituição e a comunidade (não é obrigatório citar autor para isso, mas se citar algum documento institucional, referenciar corretamente).
+  \item Se houver literatura técnica ou documentação de apoio consultada, citar conforme NBR 10520 (autor-data) e listar depois em Referências.
+  \item Encerrar relacionando os conceitos com os conteúdos das disciplinas do núcleo tecnológico do curso.
+\end{itemize}
+\end{instrucoes}
+
+[Escreva aqui a fundamentação, com citações no formato autor-data quando houver, por
+exemplo: "Segundo Silva (2020), ..." ou "(SILVA, 2020, p. 12)".]
+
+% =====================================================================
+\section{Metodologia e Descrição das Atividades}
+
+\begin{instrucoes}
+Deve responder, nesta ordem:
+\begin{itemize}
+  \item \textbf{Planejamento}: como o projeto foi organizado (cronograma, etapas), e como o público-alvo/instituição parceira foi definido e contatado.
+  \item \textbf{Público atendido}: quem foi beneficiado (número de pessoas, turmas, equipamentos, instituições), e como isso foi levantado.
+  \item \textbf{Procedimento}: passo a passo do que foi feito em campo — atendimentos realizados, oficinas ministradas, equipamentos consertados/configurados, materiais produzidos, conforme o caso.
+  \item \textbf{Materiais e ferramentas} usados, com detalhe suficiente para outra pessoa reproduzir a ação.
+  \item \textbf{Local e período} de realização, compatíveis com o plano de atividades deferido pelo(a) orientador(a) e com o prazo de entrega (30 dias após concluir o projeto, no técnico integrado — OD 2024, Art. 300, §2º).
+\end{itemize}
+\end{instrucoes}
+
+[Escreva aqui a metodologia e a descrição das atividades, respondendo: o quê, para quem, com quê, como e quando.]
+
+% =====================================================================
+\section{Resultados e Impacto}
+
+\begin{instrucoes}
+Deve conter:
+\begin{itemize}
+  \item Números concretos do que foi entregue (quantidade de equipamentos atendidos, pessoas capacitadas, chamados resolvidos, oficinas realizadas etc.), com tabela se ajudar a organizar os dados.
+  \item Avaliação do impacto: o que mudou para o público atendido (ex.: retomada de uso dos equipamentos, redução de tempo de espera por suporte, depoimento da instituição parceira, quando houver).
+  \item Resposta explícita ao objetivo e, se houver, a cada objetivo específico definido na introdução.
+  \item Diferente de um relatório de pesquisa, aqui o foco não é "o que descobrimos", é "que diferença fizemos" — mantenha esse ângulo.
+\end{itemize}
+\end{instrucoes}
+
+[Escreva aqui os resultados e o impacto. Exemplo de tabela abaixo — apague se não for usar.]
+
+\begin{table}[!ht]
+  \centering
+  \caption{[Legenda da tabela, descrevendo o que ela mostra]}
+  \begin{tabular}{lcc}
+    \hline
+    [Categoria de atendimento] & [Quantidade] & [Observação] \\
+    \hline
+    [Item A] & [valor] & [valor] \\{}
+    [Item B] & [valor] & [valor] \\
+    \hline
+  \end{tabular}
+  \\[0.3em]
+  {\footnotesize Fonte: [registros do projeto / elaborado pelo(s) autor(es), ano].}
+\end{table}
+
+% =====================================================================
+\section{Considerações Finais}
+
+\begin{instrucoes}
+Deve conter:
+\begin{itemize}
+  \item Retomada do objetivo: o projeto atendeu o que se propôs? Como?
+  \item Síntese dos principais resultados, sem repetir os números já mostrados em detalhe na seção anterior.
+  \item Contribuição do projeto: o que ele agregou à comunidade/instituição parceira, e o que agregou à formação técnica do(a) estudante — este é o ponto em que se demonstra a "articulação entre teoria e prática" que caracteriza a prática profissional (PPC 2012, seção 5.2.1).
+  \item Limitações do trabalho (o que não foi possível atender, e por quê).
+  \item Continuidade: se a ação pode/deve continuar, e como (útil se a instituição parceira for manter vínculo com o curso).
+  \item Não introduzir dado novo aqui: esta seção só retoma o que já foi mostrado.
+\end{itemize}
+\end{instrucoes}
+
+[Escreva aqui as considerações finais.]
+
+\postextual
+
+% =====================================================================
+\section*{Referências}
+
+\begin{instrucoes}
+Regras (NBR 6023):
+\begin{itemize}
+  \item Ordem alfabética pelo sobrenome do primeiro autor.
+  \item Um parágrafo por obra, sem numeração, com recuo da segunda linha em diante.
+  \item Todo item citado no texto precisa estar aqui, e só o que foi citado deve estar aqui. Se o relatório não citar nenhuma fonte externa (comum em relatórios de extensão mais operacionais), esta seção pode ficar só com a documentação técnica de apoio usada (manuais, datasheets, documentação oficial de software).
+\end{itemize}
+Exemplos de formato por tipo de fonte (adapte ao que você usou):
+\end{instrucoes}
+
+\newcommand{\referencia}[1]{\par\noindent\hangindent=1cm #1\par\medskip}
+
+\referencia{SOBRENOME, Nome. \textit{Título da obra}: subtítulo se houver.
+Edição. Local de publicação: Editora, ano.}
+
+\referencia{NOME DA INSTITUIÇÃO/FABRICANTE. \textit{Título do manual ou
+documentação técnica}. Local: Instituição, ano. Disponível em:
+\texttt{https://endereco-completo}. Acesso em: dia mês ano.}
+
+
+\end{document}

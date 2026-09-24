@@ -1,0 +1,258 @@
+% ============================================================================
+% EXEMPLO FICTÍCIO — Artigo científico como Prática Profissional
+% Curso Técnico Integrado em Informática (PPC 2012) — IFRN Campus Ceará-Mirim
+% ============================================================================
+%
+% Este arquivo é o irmão de "artigo-metalinguistico.tex": mesmo modelo, mesma
+% estrutura de seções, mas com um estudo fictício preenchido do início ao
+% fim, para servir de referência visual de como o artigo pronto deve ficar.
+%
+% ATENÇÃO: dados, números e nomes deste exemplo são inventados para fins
+% didáticos. Não citar nem reutilizar como se fossem reais.
+%
+% Compila com pdflatex (rode duas vezes por causa do sumário/referências).
+% ============================================================================
+
+\documentclass[article,12pt,a4paper]{abntex2}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{times}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+
+% Cabeçalho institucional: logo do IFRN + identificação do Campus, em todas
+% as páginas do artigo.
+\pagestyle{fancy}
+\setlength{\headheight}{30pt}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyhead[L]{\includegraphics[height=0.9cm]{ifrn-logo.png}}
+\fancyhead[R]{\textit{IFRN -- Campus Ceará-Mirim}}
+\fancyfoot[C]{\thepage}
+
+\renewcommand{\maketitlehookb}{}%% sem título em língua estrangeira (sem abstract)
+\titulo{Comparação de Desempenho entre HDD e SSD em Computadores de Laboratório Escolar: um Estudo de Caso}
+\autor{Maria Eduarda F. Silva \and João Pedro A. Costa \and Prof.\ Antônio R. Nunes\footnote{Professor orientador. Docente da área de Informática, IFRN Campus Ceará-Mirim.}}
+\local{Ceará-Mirim -- RN}
+\data{2026}
+\instituicao{Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte -- IFRN \\ Campus Ceará-Mirim}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+\begin{resumo}
+O desempenho dos computadores de laboratórios escolares afeta diretamente o
+tempo de aula disponível para atividades práticas. Este trabalho tem como
+objetivo comparar o desempenho de computadores equipados com disco rígido
+(HDD) e com unidade de estado sólido (SSD) em tarefas típicas de um
+laboratório de informática escolar. Foram cronometrados o tempo de
+inicialização do sistema operacional, o tempo de abertura de um pacote de
+aplicativos de escritório e o tempo de cópia de um conjunto de arquivos de
+2 GB, em dez máquinas com configuração idêntica, cinco com HDD e cinco com
+SSD. Os testes mostraram que as máquinas com SSD inicializaram, em média,
+71\% mais rápido que as máquinas com HDD, abriram os aplicativos 58\% mais
+rápido e copiaram os arquivos 84\% mais rápido. Conclui-se que a substituição
+do HDD pelo SSD reduz de forma expressiva o tempo ocioso em sala de aula,
+sendo uma medida de baixo custo relativo para melhorar o aproveitamento das
+aulas práticas de informática.
+
+\vspace{\onelineskip}
+\noindent
+\textbf{Palavras-chave}: Desempenho de computadores. SSD. HDD. Laboratório de informática.
+\end{resumo}
+
+\textual
+\pagestyle{fancy}
+
+\section{Introdução}
+
+Laboratórios de informática escolares costumam operar por vários anos sem
+atualização de hardware, e o tempo gasto esperando o computador inicializar
+ou abrir programas reduz o tempo efetivo de aula. No laboratório de
+Informática do IFRN Campus Ceará-Mirim, professores relatam que parte
+significativa das aulas práticas é consumida por essa espera, o que motivou
+este trabalho.
+
+O problema investigado é: qual o impacto real, medido em tempo, da troca de
+disco rígido (HDD) por unidade de estado sólido (SSD) nas tarefas mais
+comuns realizadas em um laboratório de informática escolar? Essa pergunta é
+relevante porque a resposta orienta decisões de manutenção do laboratório
+com recursos limitados, e se relaciona diretamente com os conteúdos da
+disciplina de Organização e Manutenção de Computadores, do núcleo
+tecnológico do curso.
+
+O objetivo geral deste trabalho é comparar o desempenho de computadores com
+HDD e com SSD em três tarefas típicas de uso escolar. Os objetivos
+específicos são: (a) medir o tempo de inicialização do sistema operacional;
+(b) medir o tempo de abertura de um pacote de aplicativos de escritório; e
+(c) medir o tempo de cópia de um conjunto de arquivos.
+
+Este artigo está organizado da seguinte forma: a seção 2 apresenta os
+conceitos técnicos de HDD e SSD e trabalhos relacionados; a seção 3 descreve
+a metodologia dos testes; a seção 4 apresenta e discute os resultados; e a
+seção 5 traz a conclusão.
+
+\section{Fundamentação Teórica}
+
+O disco rígido (HDD) armazena dados em pratos magnéticos giratórios, lidos
+por uma cabeça de leitura e gravação que se desloca fisicamente sobre o
+disco (TORRES, 2016). Esse movimento mecânico é o principal fator que limita
+a velocidade de acesso aos dados, especialmente em operações que exigem
+muitos acessos pequenos e espalhados, como a inicialização de um sistema
+operacional.
+
+A unidade de estado sólido (SSD) armazena dados em memória flash, sem partes
+móveis. Segundo Torres (2016, p. 212), "a ausência de componentes mecânicos
+elimina o tempo de busca (\textit{seek time}) e a latência rotacional,
+principais gargalos de desempenho do HDD". Isso resulta em tempos de acesso
+muito menores, sobretudo em operações de leitura aleatória, comuns durante
+a inicialização do sistema e a abertura de programas.
+
+Estudos de manutenção de laboratórios escolares, como o relatado por Alencar
+e Ferreira (2019), mostram que a substituição do HDD por SSD costuma ser uma
+das intervenções de melhor custo-benefício em parques de máquinas já
+depreciados, por não exigir troca de outros componentes.
+
+Outro fator relevante é o gerenciamento interno da memória flash. Diferente
+do HDD, o SSD depende de rotinas de \textit{wear leveling} (distribuição
+uniforme das gravações entre as células de memória) e do comando TRIM, que
+informa ao controlador quais blocos estão livres para reescrita. Segundo
+Torres (2016, p. 218), a ausência dessas rotinas, ou um sistema operacional
+desatualizado que não as suporte, pode reduzir o ganho de desempenho do SSD
+ao longo do tempo — o que reforça a importância de manter o sistema
+operacional dos laboratórios atualizado, e não apenas trocar o disco.
+
+Os conceitos de arquitetura de armazenamento, tempo de acesso e taxa de
+transferência revisados nesta seção são tratados na disciplina de
+Organização e Manutenção de Computadores do curso, o que situa este trabalho
+como aplicação prática desses conteúdos, e não apenas um teste informal de
+desempenho.
+
+\section{Metodologia}
+
+Esta pesquisa é de natureza experimental e comparativa. Os testes foram
+realizados em dez computadores do Laboratório de Informática 2 do IFRN
+Campus Ceará-Mirim, todos com a mesma configuração de processador, memória
+RAM e sistema operacional (Linux, distribuição Ubuntu 22.04), diferindo
+apenas no tipo de disco: cinco máquinas com HDD de 5.400 RPM e cinco
+máquinas com SSD SATA III, ambos de 240 GB.
+
+Foram cronometradas três tarefas, repetidas três vezes em cada máquina, com
+o tempo médio registrado em segundos:
+
+\begin{enumerate}
+  \item \textbf{Inicialização}: tempo entre ligar a máquina e a tela de
+        login estar pronta para uso;
+  \item \textbf{Abertura de aplicativos}: tempo entre o duplo clique no
+        ícone de um pacote de escritório e a janela ficar pronta para
+        digitação;
+  \item \textbf{Cópia de arquivos}: tempo para copiar uma pasta de 2 GB,
+        com arquivos de tamanhos variados, de um pendrive para o disco
+        local.
+\end{enumerate}
+
+Os testes foram realizados no período de duas semanas de outubro de 2026,
+conforme o plano de atividades da prática profissional deferido pelo
+orientador, fora do horário de aula, para não interferir no uso do
+laboratório. Os tempos foram medidos com cronômetro digital e registrados em
+planilha eletrônica, na qual também foi calculada a média e a variação
+percentual entre os grupos HDD e SSD.
+
+Antes da coleta, todas as dez máquinas passaram por uma reinstalação limpa
+do sistema operacional e dos aplicativos usados no teste, para eliminar
+diferenças causadas por arquivos temporários acumulados ou fragmentação do
+disco em uso prévio. Cada tarefa foi cronometrada três vezes em cada
+máquina, sempre no mesmo horário do dia, e o valor considerado foi a média
+aritmética das três medições, o que reduz o efeito de variações pontuais
+(como processos em segundo plano) no tempo registrado.
+
+\section{Resultados e Discussão}
+
+A Tabela \ref{tab:resultados} apresenta o tempo médio, em segundos, de cada
+tarefa nos dois grupos de máquinas.
+
+\begin{table}[!ht]
+  \centering
+  \caption{Tempo médio por tarefa, em segundos}
+  \label{tab:resultados}
+  \begin{tabular}{lccc}
+    \hline
+    Tarefa & HDD (média) & SSD (média) & Redução \\
+    \hline
+    Inicialização do sistema & 58,4 s & 16,9 s & 71\% \\
+    Abertura de aplicativos  & 12,1 s & 5,1 s  & 58\% \\
+    Cópia de arquivos (2 GB) & 94,7 s & 15,2 s & 84\% \\
+    \hline
+  \end{tabular}
+  \\[0.3em]
+  {\footnotesize Fonte: elaborado pelos autores (2026), a partir dos testes descritos na seção 3.}
+\end{table}
+
+Os resultados confirmam o que Torres (2016) descreve sobre a eliminação do
+tempo de busca e da latência rotacional no SSD: as maiores reduções
+percentuais ocorreram justamente nas tarefas com mais operações de leitura
+pequenas e espalhadas — inicialização do sistema e cópia de muitos arquivos
+pequenos —, e não apenas na transferência de dados em bloco.
+
+A redução de 71\% no tempo de inicialização, em particular, representa cerca
+de 41 segundos a menos por aula em que o laboratório é usado, considerando
+que os alunos ligam a máquina no início do período. Ao longo de uma semana
+de aulas práticas, essa diferença se traduz em minutos a mais de tempo
+efetivo de uso do computador, o que responde diretamente ao objetivo deste
+trabalho.
+
+Esses resultados também estão alinhados com o observado por Alencar e
+Ferreira (2019) em outros laboratórios escolares, reforçando que a troca de
+disco é uma intervenção replicável e com ganho perceptível mesmo sem trocar
+outros componentes da máquina.
+
+Do ponto de vista de custo-benefício, o SSD SATA III de 240 GB usado no
+teste tinha, à época da coleta de dados, preço de mercado comparável ao de
+um HDD de maior capacidade, o que reforça a viabilidade da troca mesmo com
+orçamento limitado de manutenção. Ainda assim, como a diferença percentual
+variou por tarefa (71\% na inicialização contra 58\% na abertura de
+aplicativos), o ganho tende a ser mais perceptível em laboratórios cujo uso
+predominante envolve religar as máquinas com frequência, como ocorre entre
+turmas consecutivas no Campus.
+
+\section{Conclusão}
+
+Este trabalho comparou o desempenho de computadores com HDD e com SSD em
+três tarefas típicas de um laboratório de informática escolar e constatou
+reduções de tempo entre 58\% e 84\% a favor do SSD, respondendo ao objetivo
+proposto. O resultado mais relevante, para o contexto escolar, foi a redução
+de 71\% no tempo de inicialização, por ser a tarefa realizada em todas as
+aulas.
+
+Do ponto de vista da formação técnica, o trabalho permitiu aplicar, em
+condições reais de laboratório, conceitos de arquitetura de armazenamento
+estudados em Organização e Manutenção de Computadores, articulando a teoria
+da disciplina com um problema concreto de manutenção do próprio câmpus.
+
+Como limitação, os testes usaram apenas um modelo de SSD e um de HDD, e não
+avaliaram o custo de aquisição em relação ao ganho de desempenho. Como
+sugestão de trabalho futuro, recomenda-se repetir os testes com discos SSD
+NVMe e incluir uma análise de custo-benefício para subsidiar decisões de
+compra do câmpus.
+
+\postextual
+
+\section*{Referências}
+
+\newcommand{\referencia}[1]{\par\noindent\hangindent=1cm #1\par\medskip}
+
+\referencia{ALENCAR, R. M.; FERREIRA, T. S. Manutenção preventiva em
+laboratórios de informática escolares: um estudo de caso em três escolas
+públicas. \textit{Revista Técnica de Informática Aplicada}, Natal, v. 4,
+n. 2, p. 45-58, 2019.}
+
+\referencia{TORRES, Gabriel. \textit{Hardware}: manual completo. 7. ed. Rio
+de Janeiro: Nova Terra, 2016.}
+
+\end{document}

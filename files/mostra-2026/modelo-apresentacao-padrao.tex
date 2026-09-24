@@ -1,0 +1,106 @@
+% ============================================================================
+% MODELO PADRÃO — Apresentação de projeto para a Mostra de Protótipos 2026
+% IFRN Campus Ceará-Mirim
+% ============================================================================
+%
+% COMO USAR
+% Este arquivo é um modelo: cada equipe deve fazer uma cópia e substituir os
+% trechos entre colchetes ([Título do Projeto], [Nome do(a) autor(a)] etc.)
+% pelo conteúdo do próprio projeto. Os títulos dos slides (Introdução,
+% Metodologia, Resultados, Conclusão) já seguem a mesma estrutura do artigo
+% escrito — reaproveite o que já foi escrito lá.
+%
+% Mantenha a capa (logo + nome da Mostra) e o rodapé como estão: é o padrão
+% visual do evento. Adicione, remova ou duplique slides de conteúdo conforme
+% a necessidade do seu projeto (por exemplo, mais de um slide de Resultados
+% para caber fotos/prints do protótipo).
+%
+% Compila com pdflatex.
+% ============================================================================
+
+\documentclass[12pt,aspectratio=169]{beamer}
+
+\usetheme{metropolis}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+
+\definecolor{ifrnverde}{HTML}{2E8B3D}
+\definecolor{ifrnvermelho}{HTML}{C8102E}
+\setbeamercolor{palette primary}{bg=ifrnverde,fg=white}
+\setbeamercolor{frametitle}{bg=ifrnverde,fg=white}
+\setbeamercolor{progress bar}{fg=ifrnvermelho,bg=ifrnverde!30}
+\setbeamercolor{alerted text}{fg=ifrnvermelho}
+
+% Rodapé padrão em todos os slides de conteúdo (mantenha em toda apresentação
+% da Mostra, para identidade visual consistente).
+\setbeamertemplate{frame footer}{Mostra de Protótipos --- 2026 --- IFRN Campus Ceará-Mirim}
+
+\title{[TÍTULO DO PROJETO]}
+\author{[Nome do(a) autor(a)] \and [Nome do(a) coautor(a), se houver]}
+\institute{Orientador(a): [Nome do(a) orientador(a)] --- IFRN Campus Ceará-Mirim}
+\date{}
+
+\begin{document}
+
+% ----------------------------------------------------------------------
+% CAPA — não altere o cabeçalho do evento (logo, nome, ano, campus); troque
+% apenas título do projeto, autor(es) e orientador(a).
+\begin{frame}[plain]
+  \begin{center}
+    \includegraphics[width=3cm]{ifrn-logo.png}\\[0.5cm]
+    {\large Mostra de Protótipos --- 2026}\\[0.1cm]
+    {\normalsize IFRN --- Campus Ceará-Mirim}\\[1.2cm]
+    {\Huge\bfseries [TÍTULO DO PROJETO]}\\[0.8cm]
+    {\large [Nome do(a) autor(a)] \quad [Nome do(a) coautor(a), se houver]}\\[0.3cm]
+    {\normalsize Orientador(a): [Nome do(a) orientador(a)]}
+  \end{center}
+\end{frame}
+
+% ----------------------------------------------------------------------
+\begin{frame}{Introdução}
+  \begin{itemize}
+    \item {[}Qual problema ou necessidade motivou o projeto?{]}
+    \item {[}Por que isso importa — para a escola, para a comunidade, para a
+          área técnica?{]}
+    \item {[}Objetivo do trabalho, em uma frase.{]}
+  \end{itemize}
+\end{frame}
+
+% ----------------------------------------------------------------------
+\begin{frame}{Metodologia}
+  \begin{itemize}
+    \item {[}O que foi feito, em ordem.{]}
+    \item {[}Com quê: materiais, ferramentas, tecnologias usadas.{]}
+    \item {[}Como: passo a passo de construção/teste do protótipo.{]}
+  \end{itemize}
+\end{frame}
+
+% ----------------------------------------------------------------------
+\begin{frame}{Resultados}
+  \begin{itemize}
+    \item {[}O que foi obtido — dados, funcionamento do protótipo.{]}
+    \item {[}Foto, print ou diagrama do protótipo pode entrar aqui:{]}
+  \end{itemize}
+  \begin{center}
+    % \includegraphics[width=0.6\textwidth]{foto-do-prototipo.png}
+  \end{center}
+\end{frame}
+
+% ----------------------------------------------------------------------
+\begin{frame}{Conclusão}
+  \begin{itemize}
+    \item {[}O trabalho alcançou o objetivo proposto? Como?{]}
+    \item {[}Contribuição do projeto — o que ele resolve ou melhora.{]}
+    \item {[}Limitações e próximos passos, se houver.{]}
+  \end{itemize}
+\end{frame}
+
+% ----------------------------------------------------------------------
+\begin{frame}[standout]
+  Obrigado(a)!\\[0.3cm]
+  \Large Perguntas?
+\end{frame}
+
+\end{document}
