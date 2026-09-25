@@ -4,8 +4,7 @@ Site estático (GitHub Pages) com o guia e os modelos de artigo/relatório da
 Prática Profissional do Técnico Integrado em Informática (PPC 2012), para os
 alunos baixarem diretamente — sem depender de link do Drive.
 
-**Site:** https://jp-guimaraes.github.io/modelos-rpp-ifrn-cm/ (depois de
-habilitar o GitHub Pages em Settings → Pages → Branch: `main` / `/ (root)`)
+**Site:** https://ifrn-cm.github.io/modelos-rpp-ifrn-cm/
 
 ## Estrutura
 
